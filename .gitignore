@@ -1,0 +1,22 @@
+# Python compilado
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+ENV/
+
+# Base de datos local (ya no la vamos a necesitar, vamos por Postgres)
+db.sqlite3
+db.sqlite3-journal
+
+# Configuraciones de editores (VS Code, Linux Mint, etc.)
+.vscode/
+.idea/
+.DS_Store
+
+# Variables de entorno (Contraseñas, tokens, etc. ¡Súper secreto!)
+.env
