@@ -154,7 +154,10 @@ CORS_ALLOWED_ORIGINS = [
     "https://gestor-ahorros-frontend.vercel.app",
 ]
 
-# Si estamos en desarrollo abrimos todo; en producción nos plantamos con la lista de arriba
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://.*\.vercel\.app$",
+]
+
 if DEBUG:
     CORS_ALLOW_ALL_ORIGINS = True
 else:
