@@ -151,15 +151,13 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5500",
     "http://127.0.0.1:5500",
     "http://localhost:8000",
+    "https://gestor-ahorros-frontend.vercel.app",
 ]
 
-# Si estamos en producción (DEBUG=False), somos estrictos con los dominios permitidos.
-# Si estamos en desarrollo, abrimos la canilla para no renegar.
+# Si estamos en desarrollo abrimos todo; en producción nos plantamos con la lista de arriba
 if DEBUG:
     CORS_ALLOW_ALL_ORIGINS = True
 else:
     CORS_ALLOW_ALL_ORIGINS = False
-    # Acá más adelante vamos a meter la URL que te regale Vercel para tu frontend
-    # CORS_ALLOWED_ORIGINS.append("https://tu-frontend.vercel.app")
 
 CORS_ALLOW_CREDENTIALS = True
